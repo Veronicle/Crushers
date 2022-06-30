@@ -1,0 +1,29 @@
+p {
+    font-family: Arial;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.video-title {
+    font-size: 30px;
+    font-weight: bold;
+    width: 100px;
+    line-height: 35px;
+}
+
+.description {
+    font-size: 15px;
+    color: grey;
+}
+
+.continuation {
+    font-size: 15px;
+    color: grey;
+
+}
+
+.age {
+    font-size: 15px;
+    color: grey;
+    width: 200px;
+    line-height: 22px;
+}
