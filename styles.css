@@ -529,10 +529,6 @@
     color: #fff;
     background: #9518fc 
   }
-
-  .our_products {
-    margin-bottom: 15px;
-  }
   
   .services__card:nth-child(2) {
     background: #9518fc; /* fallback for old browsers */
@@ -717,13 +713,50 @@
     background-color: black;
   }
 
-  .box1 {
-    text-align: center;
+  .row {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .column {
+    flex: 50%;
+    margin-left: 35px;
+    margin-right: 35px;
+    vertical-align: middle;
+    
+  }
+  
+  .column img {
+    border-color: red;
+    border-width: 5px;
+    width: 180px;
+    height: 216px;
+    border-radius: 25px;
+    margin: 5px;
+    vertical-align: middle;
+    border-color:rgb(132, 0, 255);
+    border-width: 5px;
+  }
 
-.i2 { 
-  margin-top: 10px;
-}
+  .column img:hover  {
+    opacity: 75%;
+    cursor: pointer;
+  }
+
+
+  figure {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: rgb(132, 0, 255) underline;
+    text-decoration-thickness: 4px;  
+    font-weight: bolder;
+  }
