@@ -737,6 +737,12 @@
     vertical-align: middle;
     border-color:rgb(132, 0, 255);
     border-width: 5px;
+    animation: fadeIn 2s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 
   .column img:hover  {
@@ -744,6 +750,7 @@
     cursor: pointer;
     transform: scale(1.075);
     transition: 0.3s;
+
 
   }
 
@@ -762,4 +769,5 @@
     text-decoration: rgb(132, 0, 255) underline;
     text-decoration-thickness: 4px;  
     font-weight: bolder;
+    animation: fadeIn 2s;
   }
