@@ -771,3 +771,7 @@
     font-weight: bolder;
     animation: fadeIn 2s;
   }
+
+  hr {
+    width: 60%; margin: auto; border-width: 5px; border-color: rgb(132, 0, 255); margin-top: 15px; border-radius: 5px;
+  }
