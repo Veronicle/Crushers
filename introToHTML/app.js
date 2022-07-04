@@ -1,9 +1,10 @@
-const bar = document.querySelector('#mobile-menu');
-const barLinks = document.querySelector('.navBar__menu');
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
 
-const displayMeny = () => {
-    bar.classList.toggle('is-active');
-    barLinks.classList.toggle('active');
+// Display Mobile Menu
+const mobileMenu = () => {
+  menu.classList.toggle('is-active');
+  menuLinks.classList.toggle('active');
 };
 
-BarProp.addEventListener('click', mobileMenu);
+menu.addEventListener('click', mobileMenu);
