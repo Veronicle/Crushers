@@ -742,6 +742,9 @@
   .column img:hover  {
     opacity: 75%;
     cursor: pointer;
+    transform: scale(1.075);
+    transition: 0.3s;
+
   }
 
 
