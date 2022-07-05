@@ -770,7 +770,7 @@
     text-decoration: rgb(132, 0, 255) underline;
     text-decoration-thickness: 4px;  
     font-weight: bolder;
-    animation: fadeIn 2s;
+    animation: fadeIn 3s;
   }
 
   hr {
