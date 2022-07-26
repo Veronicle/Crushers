@@ -781,3 +781,34 @@
     color:#9518fc;
 
   }
+
+  .cfac__bullet {
+    text-align: center;
+    padding: 5px; 
+    color: rgb(255, 255, 255); 
+    font-family: sans-serif; 
+    font-size: 20px
+   }
+  
+
+  .cfac__mail {
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    
+
+  }
+
+  .ending_img {
+    padding: 20px;
+    border-radius: 60px;
+    max-width: 563px;
+    max-height: 500px
+    
+  }
+
+  .ending_img:hover {
+    opacity: 85%;
+    transition: 1s;
+  }
+
