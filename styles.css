@@ -601,6 +601,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
   }
   
   #footer__logo {
@@ -775,13 +777,33 @@
 
   hr {
     width: 60%; margin: auto; border-width: 5px; border-color: rgb(132, 0, 255); margin-top: 15px; border-radius: 5px;
+    animation-duration: 3s;
+    animation-name: fadeIn;
   }
+  
 
   .araash_tag:hover {
     color:#9518fc;
 
   }
 
+  .cfac__bullet, .init__description, .title, .subhead, .ending_img {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;  
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+
+  }
   .cfac__bullet {
     text-align: center;
     padding: 5px; 
@@ -794,8 +816,7 @@
   .cfac__mail {
     text-align: center;
     font-family: sans-serif;
-    color: white;
-    
+    color: white
 
   }
 
