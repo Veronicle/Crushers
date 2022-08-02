@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+    <body>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+        
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+            apiKey: "AIzaSyAccho-YaRgmWYAf3ut3l8dAqPHk88p2bQ",
+            authDomain: "crushersorders.firebaseapp.com",
+            projectId: "crushersorders",
+            storageBucket: "crushersorders.appspot.com",
+            messagingSenderId: "240158921427",
+            appId: "1:240158921427:web:c06352fffc93a07fd9ba26",
+            measurementId: "G-SNL619M3QQ"
+            };
+        
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+
+            function addData() {
+                firebease.database().ref("Buyer").set({
+                    fname: document.getElementByID("fname").value,
+                    lname: document.getElementByID("lname").value,
+                    street: document.getElementByID("street").value,
+                    city: document.getElementById("city").value,
+                    state: document.getElementById("state").value,
+                    zip: document.getElementByID("zip").value,
+                    country: document.getElementByID("country").value,
+                    style: document.getElementByID("style").value,
+                    size: document.getElementByID("size").value,
+                    color: document.getElementByID("color").value,
+                    message: document.getElementByID("subject").value
+
+                })
+            }
+        </script>
+        <div class="container">
+        
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="First Name">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+        
+            <label for="street"> Street </label>
+            <input type="text" id="street" name="street" placeholder="Street">
+
+            <label for="city"> City </label>
+            <input type="text" id="city" name="city" placeholder="City">
+        
+            <label for="state"> State </label>
+            <input type="text" id="state" name="state" placeholder="State">
+
+            <label for="zip"> Zip Code </label>
+            <input type="text" id="zip" name="zip" placeholder="Zip Code">
+        
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="USA"> USA </option>
+                <option value="Canada"> Canada </option>
+                <option value="Mexico"> Mexico </option>
+            </select>
+
+            <label for = "style"> Style </label>
+            <select id = "style" name = "style">
+                <option value = "T-Shirt"> T-Shirt </option>
+                <option value = "Hoodie"> Hoodie </option>
+            </select>
+
+            <label for = "size"> Size </label>"
+            <select id = "size" name = "size">
+                <option value = "XS"> XS </option>
+                <option value = "S"> S </option>
+                <option value = "M"> M </option>
+                <option value = "L"> L </option>
+                <option value = "XL"> XL </option>
+            </select>
+
+            <label for = "color"> Color </label>"
+            <textarea id="color" name="color" placeholder="Color" style="height:200px"></textarea>
+
+            <label for = "saleType"> Sale Type </label>
+            <select id = "saleType">
+                <option value = "Delivery"> Delivery (+$4) </option>
+                <option value = "Pick-up"> Pick-up </option>
+            </select>
+            
+        
+            <label for="subject"> Subject </label>
+            <textarea id="subject" name="subject" placeholder=" Additional Information " style="height:200px"></textarea>
+        
+            <button onclick ="addData()"> Submit </button>
+        
+        </div>
+
+
+</body>
+
+</html>
+
+
+
