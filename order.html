@@ -4,46 +4,7 @@
 
 </head>
     <body>
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
         
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-            apiKey: "AIzaSyAccho-YaRgmWYAf3ut3l8dAqPHk88p2bQ",
-            authDomain: "crushersorders.firebaseapp.com",
-            projectId: "crushersorders",
-            storageBucket: "crushersorders.appspot.com",
-            messagingSenderId: "240158921427",
-            appId: "1:240158921427:web:c06352fffc93a07fd9ba26",
-            measurementId: "G-SNL619M3QQ"
-            };
-        
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-
-            function addData() {
-                firebease.database().ref("Buyer").set({
-                    fname: document.getElementByID("fname").value,
-                    lname: document.getElementByID("lname").value,
-                    street: document.getElementByID("street").value,
-                    city: document.getElementById("city").value,
-                    state: document.getElementById("state").value,
-                    zip: document.getElementByID("zip").value,
-                    country: document.getElementByID("country").value,
-                    style: document.getElementByID("style").value,
-                    size: document.getElementByID("size").value,
-                    color: document.getElementByID("color").value,
-                    message: document.getElementByID("subject").value
-
-                })
-            }
-        </script>
         <div class="container">
         
             <label for="fname">First Name</label>
@@ -99,10 +60,54 @@
             <label for="subject"> Subject </label>
             <textarea id="subject" name="subject" placeholder=" Additional Information " style="height:200px"></textarea>
         
-            <button onclick ="addData()"> Submit </button>
+            <button onclick ="writeData()"> Submit </button>
         
         </div>
 
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyAccho-YaRgmWYAf3ut3l8dAqPHk88p2bQ",
+              authDomain: "crushersorders.firebaseapp.com",
+              databaseURL: "https://crushersorders-default-rtdb.firebaseio.com",
+              projectId: "crushersorders",
+              storageBucket: "crushersorders.appspot.com",
+              messagingSenderId: "240158921427",
+              appId: "1:240158921427:web:ecf55c2de4035cb8d9ba26",
+              measurementId: "G-B9SXZJTRBH"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+        
+          <script>
+
+            function writeData() {
+                firebease.database().ref("Buyer").set({
+                    fname: document.getElementByID("fname").value,
+                    lname: document.getElementByID("lname").value,
+                    street: document.getElementByID("street").value,
+                    city: document.getElementById("city").value,
+                    state: document.getElementById("state").value,
+                    zip: document.getElementByID("zip").value,
+                    country: document.getElementByID("country").value,
+                    style: document.getElementByID("style").value,
+                    size: document.getElementByID("size").value,
+                    color: document.getElementByID("color").value,
+                    message: document.getElementByID("subject").value
+
+                })
+            }
+        </script>
 
 </body>
 
