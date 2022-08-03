@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop Crushers</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+          integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+          crossorigin="anonymous"
+        />
 
 </head>
-    <body>
+    <body class = "bodY">
+
+        <div class = "orderForm">
+            <h1> Order Crushers Online </h1> 
+        </div>
         
-        <div class="container">
-        
+        <div class="orderForm">
+            
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
         
             <label for="lname">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+            <label for="phone"> Phone Number </label>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number">
         
             <label for="street"> Street </label>
             <input type="text" id="street" name="street" placeholder="Street">
@@ -38,7 +56,7 @@
                 <option value = "Hoodie"> Hoodie </option>
             </select>
 
-            <label for = "size"> Size </label>"
+            <label for = "size"> Size </label>
             <select id = "size" name = "size">
                 <option value = "XS"> XS </option>
                 <option value = "S"> S </option>
@@ -47,8 +65,8 @@
                 <option value = "XL"> XL </option>
             </select>
 
-            <label for = "color"> Color </label>"
-            <textarea id="color" name="color" placeholder="Color" style="height:200px"></textarea>
+            <label for = "color"> Color </label>
+            <textarea id="color" name="color" placeholder="Color" style="height:40px"></textarea>
 
             <label for = "saleType"> Sale Type </label>
             <select id = "saleType">
@@ -56,18 +74,21 @@
                 <option value = "Pick-up"> Pick-up </option>
             </select>
             
-        
             <label for="subject"> Subject </label>
-            <textarea id="subject" name="subject" placeholder=" Additional Information " style="height:200px"></textarea>
+            <textarea id="subject" name="subject" placeholder=" Additional Information " style="height:100px"></textarea>
         
-            <button onclick ="writeData()"> Submit </button>
         
+        </div>
+
+        <div>
+            <button class = "submitBTN" onclick ="writeData()"> Submit </button>
         </div>
 
         <script type="module">
             // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
             import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+            import { getDatabase } from "firebase/database";
             // TODO: Add SDKs for Firebase products that you want to use
             // https://firebase.google.com/docs/web/setup#available-libraries
           
@@ -87,6 +108,7 @@
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
             const analytics = getAnalytics(app);
+            const database = getDatabase(app);
           </script>
         
           <script>
@@ -95,6 +117,7 @@
                 firebease.database().ref("Buyer").set({
                     fname: document.getElementByID("fname").value,
                     lname: document.getElementByID("lname").value,
+                    phone: document.getElementByID("phone").value,
                     street: document.getElementByID("street").value,
                     city: document.getElementById("city").value,
                     state: document.getElementById("state").value,

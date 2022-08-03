@@ -833,3 +833,51 @@
     transition: 1s;
   }
 
+  .bodY {
+    background-color: black;
+
+  }
+
+  .orderForm {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 100px 50px;
+  }
+
+  input, textarea, select, ::placeholder {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-color:rgb(132, 0, 255);
+
+  }
+
+  .submitBTN {
+    background-color: white;
+    color:rgb(0, 0, 0);
+    height: 75px;
+    width: 180px;
+    border-radius: 25px;
+    border-color: rgb(132, 0, 255);
+    border-width: 5px;
+    margin-left: 45%;
+  }
+
+  .submitBTN:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .submitBTN:active {
+    opacity: 0.9;  
+    transform: scale(1.05);
+  }
