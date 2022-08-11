@@ -14,6 +14,33 @@
         />
 
 </head>
+
+<nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html#home" class = "logo" id="navbar__logo"> CRUSHERS </a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span> <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html#home" class="navbar__links" id="home-page">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="index.html#about" class="navbar__links" id="about-page"> About Us </a>
+        </li> 
+        <li class="navbar__item">
+          <a href="index.html#products" class="navbar__links" id="products-page"
+            >Products</a
+          >
+        </li>
+        <li class="navbar__btn">
+          <a href="https://www.instagram.com/the_official_crushers_clan_/" target = "_blank" class="button" id="signup"> ORDER </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
     <body class = "bodY">
 
         <div class = "orderForm">
@@ -66,7 +93,7 @@
             </select>
 
             <label for = "color"> Color </label>
-            <textarea id="color" name="color" placeholder="Color" style="height:40px"></textarea>
+            <input type="text" id="color" name="color" placeholder="Color">
 
             <label for = "saleType"> Sale Type </label>
             <select id = "saleType">
@@ -75,7 +102,7 @@
             </select>
             
             <label for="subject"> Subject </label>
-            <textarea id="subject" name="subject" placeholder=" Additional Information " style="height:100px"></textarea>
+            <textarea id="subject" name="subject" placeholder= "Additional Information" style="height:100px"></textarea>
         
         
         </div>
